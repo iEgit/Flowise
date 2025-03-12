@@ -436,7 +436,9 @@ class LLMNode_SeqAgents implements INode {
             const nodeInputVars = llmNodeInputVariables.join(' ')
             const providedInputVars = Object.keys(llmNodeInputVariablesValues).join(' ')
 
-            throw new Error(`LLM Node input variables values are not provided! Required: ${nodeInputVars}, Provided: ${providedInputVars}. Missing: ${missingInputVars}`)
+            throw new Error(
+                `LLM Node input variables values are not provided! Required: ${nodeInputVars}, Provided: ${providedInputVars}. Missing: ${missingInputVars}`
+            )
         }
 
         const workerNode = async (state: ISeqAgentsState, config: RunnableConfig) => {
