@@ -77,7 +77,9 @@ class DocStore_VectorStores implements INode {
         const databaseEntities = options.databaseEntities as IDatabaseEntity
         const output = nodeData.outputs?.output as string
 
-        const entity = await appDataSource.getRepository(databaseEntities['DocumentStore']).findOneBy({ id: selectedStore })
+        const entity = await appDataSource.getRepository(databaseEntities['DocumentStore']).findOne({
+            where: [{ id: selectedStore }, { name: selectedStore }]
+        })
         if (!entity) {
             return { error: 'Store not found' }
         }
