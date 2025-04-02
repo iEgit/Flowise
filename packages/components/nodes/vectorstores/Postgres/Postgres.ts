@@ -9,6 +9,7 @@ import { VectorStoreDriver } from './driver/Base'
 import { TypeORMDriver } from './driver/TypeORM'
 // import { PGVectorDriver } from './driver/PGVector'
 import { getContentColumnName, getDatabase, getHost, getPort, getTableName } from './utils'
+import { PGVectorDriver } from './driver/PGVector'
 
 const serverCredentialsExists = !!process.env.POSTGRES_VECTORSTORE_USER && !!process.env.POSTGRES_VECTORSTORE_PASSWORD
 
@@ -308,7 +309,8 @@ class Postgres_VectorStores implements INode {
             default:
                 return new TypeORMDriver(nodeData, options)
         }*/
-        return new TypeORMDriver(nodeData, options)
+        return new PGVectorDriver(nodeData, options)
+        // return new TypeORMDriver(nodeData, options)
     }
 }
 
