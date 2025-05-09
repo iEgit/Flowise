@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@google/generative-ai': ^0.22.0
+  '@google/generative-ai': ^0.24.0
   '@grpc/grpc-js': ^1.10.10
   '@langchain/core': 0.3.37
   '@qdrant/openapi-typescript-fetch': 1.2.6
@@ -157,7 +157,7 @@ importers:
         version: 3.9.25
       '@getzep/zep-cloud':
         specifier: ~1.0.7
-        version: 1.0.12(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(langchain@0.3.24(tfwsyzu74ujvredtvlqoj5oazi))
+        version: 1.0.12(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(langchain@0.3.24(r52427dkjimy2sk2p6loiaaru4))
       '@getzep/zep-js':
         specifier: ^0.9.0
         version: 0.9.0
@@ -170,9 +170,12 @@ importers:
       '@google-ai/generativelanguage':
         specifier: ^2.5.0
         version: 2.9.1(encoding@0.1.13)
+      '@google-cloud/storage':
+        specifier: ^7.15.2
+        version: 7.16.0(encoding@0.1.13)
       '@google/generative-ai':
-        specifier: ^0.22.0
-        version: 0.22.0
+        specifier: ^0.24.0
+        version: 0.24.1
       '@huggingface/inference':
         specifier: ^2.6.1
         version: 2.8.1
@@ -189,8 +192,8 @@ importers:
         specifier: ^0.0.7
         version: 0.0.7(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
       '@langchain/community':
-        specifier: ^0.3.24
-        version: 0.3.42(3o72z643g534zm3y45uybil6ay)
+        specifier: ^0.3.29
+        version: 0.3.42(vgudzpgpf5vy3csv6wdj6kgj4m)
       '@langchain/core':
         specifier: 0.3.37
         version: 0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
@@ -198,8 +201,8 @@ importers:
         specifier: ^0.0.5
         version: 0.0.5(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
       '@langchain/google-genai':
-        specifier: 0.1.9
-        version: 0.1.9(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(zod@3.22.4)
+        specifier: 0.2.3
+        version: 0.2.3(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(zod@3.22.4)
       '@langchain/google-vertexai':
         specifier: ^0.2.0
         version: 0.2.7(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(zod@3.22.4)
@@ -233,6 +236,9 @@ importers:
       '@langchain/xai':
         specifier: ^0.0.1
         version: 0.0.1(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))
+      '@mem0/community':
+        specifier: ^0.0.1
+        version: 0.0.1(upqxzzhnekrtxxlkovhpamvacm)
       '@mendable/firecrawl-js':
         specifier: ^0.0.28
         version: 0.0.28
@@ -240,7 +246,7 @@ importers:
         specifier: 0.1.3
         version: 0.1.3(encoding@0.1.13)
       '@modelcontextprotocol/sdk':
-        specifier: ^1.6.1
+        specifier: ^1.10.1
         version: 1.11.1
       '@modelcontextprotocol/server-brave-search':
         specifier: ^0.6.2
@@ -304,7 +310,7 @@ importers:
         version: 1.0.0
       chromadb:
         specifier: ^1.10.0
-        version: 1.10.5(@google/generative-ai@0.22.0)(cohere-ai@7.17.1(encoding@0.1.13))(encoding@0.1.13)(ollama@0.5.15)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
+        version: 1.10.5(@google/generative-ai@0.24.1)(cohere-ai@7.17.1(encoding@0.1.13))(encoding@0.1.13)(ollama@0.5.15)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
       cohere-ai:
         specifier: ^7.7.5
         version: 7.17.1(encoding@0.1.13)
@@ -367,13 +373,13 @@ importers:
         version: 3.12.0
       langchain:
         specifier: ^0.3.5
-        version: 0.3.24(tfwsyzu74ujvredtvlqoj5oazi)
+        version: 0.3.24(r52427dkjimy2sk2p6loiaaru4)
       langfuse:
         specifier: 3.3.4
         version: 3.3.4
       langfuse-langchain:
         specifier: ^3.3.4
-        version: 3.37.2(langchain@0.3.24(tfwsyzu74ujvredtvlqoj5oazi))
+        version: 3.37.2(langchain@0.3.24(r52427dkjimy2sk2p6loiaaru4))
       langsmith:
         specifier: 0.1.6
         version: 0.1.6
@@ -531,6 +537,9 @@ importers:
       '@aws-sdk/client-secrets-manager':
         specifier: ^3.699.0
         version: 3.806.0
+      '@google-cloud/logging-winston':
+        specifier: ^6.0.0
+        version: 6.0.0(encoding@0.1.13)(winston@3.17.0)
       '@oclif/core':
         specifier: 4.0.7
         version: 4.0.7
@@ -592,7 +601,7 @@ importers:
         specifier: ^2.1.3
         version: 2.1.3
       bullmq:
-        specifier: ^5.13.2
+        specifier: ^5.42.0
         version: 5.52.2
       content-disposition:
         specifier: 0.5.4
@@ -618,6 +627,9 @@ importers:
       flowise-components:
         specifier: workspace:^
         version: link:../components
+      flowise-nim-container-manager:
+        specifier: ^1.0.11
+        version: 1.0.11
       flowise-ui:
         specifier: workspace:^
         version: link:../ui
@@ -645,15 +657,15 @@ importers:
       multer:
         specifier: ^1.4.5-lts.1
         version: 1.4.5-lts.2
+      multer-cloud-storage:
+        specifier: ^4.0.0
+        version: 4.0.0(encoding@0.1.13)
       multer-s3:
         specifier: ^3.0.1
         version: 3.0.1(@aws-sdk/client-s3@3.806.0)
       mysql2:
         specifier: ^3.11.3
         version: 3.14.1
-      nim-container-manager:
-        specifier: ^1.0.5
-        version: 1.0.5
       openai:
         specifier: 4.82.0
         version: 4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.24.4)
@@ -2726,12 +2738,50 @@ packages:
     resolution: {integrity: sha512-BtnLEMiTnf+WNu2jYOFQgI2r/PjiyqC1v48xjfn2FKsENhjAWUrKpMjGw9aMC5UYpivXsURpVga50ltJ+oKVEA==}
     engines: {node: '>=14.0.0'}
 
+  '@google-cloud/common@5.0.2':
+    resolution: {integrity: sha512-V7bmBKYQyu0eVG2BFejuUjlBt+zrya6vtsKdY+JxMM/dNntPF41vZ9+LhOshEUH01zOHEqBSvI7Dad7ZS6aUeA==}
+    engines: {node: '>=14.0.0'}
+
+  '@google-cloud/logging-winston@6.0.0':
+    resolution: {integrity: sha512-/lVp7CyT3nFOr+AjQlZnJhTIOf+kcNGB4JTziL0fkX6Ov/2qNKtRGS/NqE6cD+VSPiv5jLOty3LgkRsXMpYxQQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      winston: '>=3.2.1'
+
+  '@google-cloud/logging@11.2.0':
+    resolution: {integrity: sha512-Ma94jvuoMpbgNniwtelOt8w82hxK62FuOXZonEv0Hyk3B+/YVuLG/SWNyY9yMso/RXnPEc1fP2qo9kDrjf/b2w==}
+    engines: {node: '>=14.0.0'}
+
+  '@google-cloud/paginator@5.0.2':
+    resolution: {integrity: sha512-DJS3s0OVH4zFDB1PzjxAsHqJT6sKVbRwwML0ZBP9PbU7Yebtu/7SWMRzvO2J3nUi9pRNITCfu4LJeooM2w4pjg==}
+    engines: {node: '>=14.0.0'}
+
+  '@google-cloud/projectify@4.0.0':
+    resolution: {integrity: sha512-MmaX6HeSvyPbWGwFq7mXdo0uQZLGBYCwziiLIGq5JVX+/bdI3SAq6bP98trV5eTWfLuvsMcIC1YJOF2vfteLFA==}
+    engines: {node: '>=14.0.0'}
+
+  '@google-cloud/promisify@4.0.0':
+    resolution: {integrity: sha512-Orxzlfb9c67A15cq2JQEyVc7wEsmFBmHjZWZYQMUyJ1qivXyMwdyNOs9odi79hze+2zqdTtu1E19IM/FtqZ10g==}
+    engines: {node: '>=14'}
+
+  '@google-cloud/promisify@4.1.0':
+    resolution: {integrity: sha512-G/FQx5cE/+DqBbOpA5jKsegGwdPniU6PuIEMt+qxWgFxvxuFOzVmp6zYchtYuwAWV5/8Dgs0yAmjvNZv3uXLQg==}
+    engines: {node: '>=18'}
+
+  '@google-cloud/storage@7.16.0':
+    resolution: {integrity: sha512-7/5LRgykyOfQENcm6hDKP8SX/u9XxE5YOiWOkgkwcoO+cG8xT/cyOvp9wwN3IxfdYgpHs8CE7Nq2PKX2lNaEXw==}
+    engines: {node: '>=14'}
+
   '@google-cloud/vertexai@1.10.0':
     resolution: {integrity: sha512-HqYqoivNtkq59po8m7KI0n+lWKdz4kabENncYQXZCX/hBWJfXtKAfR/2nUQsP+TwSfHKoA7zDL2RrJYIv/j3VQ==}
     engines: {node: '>=18.0.0'}
 
-  '@google/generative-ai@0.22.0':
-    resolution: {integrity: sha512-mLR3PDWCk5O/BWNyDvFDIiwKeXQmFGZ+kJFd9m73QrUPCFREttJyVbBPTW4y9CwTbaltLMDaLDfroCrRv5Bl8Q==}
+  '@google/genai@0.7.0':
+    resolution: {integrity: sha512-r+Fwj/emnXZN5R+4JCxDXboY4AGTmTn7+Wnori5dgyJiStP0P82f9YYL0CVsCnDIumNY2i0UIcZ1zGZdtHJ34w==}
+    engines: {node: '>=18.0.0'}
+
+  '@google/generative-ai@0.24.1':
+    resolution: {integrity: sha512-MqO+MLfM6kjxcKoy0p1wRzG3b4ZZXtPI+z2IE26UogS2Cm/XHO+7gGRBh6gcJsOiIVoH93UwKvW4HdgiOZCy9Q==}
     engines: {node: '>=18.0.0'}
 
   '@graphql-typed-document-node/core@3.2.0':
@@ -3374,8 +3424,8 @@ packages:
     peerDependencies:
       '@langchain/core': 0.3.37
 
-  '@langchain/google-genai@0.1.9':
-    resolution: {integrity: sha512-YmGnGJBOMOmSwWFrVy1ySGft7RbdLjwOdziwxgMfk4353CDE7rsRyzMMLkLEwaG8qGxF5vdZAlAImnVDFkJhug==}
+  '@langchain/google-genai@0.2.3':
+    resolution: {integrity: sha512-2oWH24zPZh+HkgFcgcQClnsST3shMDuDToMolnWsRPg6wR7G6sAOkHQdqmHVxc4qAJx5wopf+vH0j+zbCk+Bag==}
     engines: {node: '>=18'}
     peerDependencies:
       '@langchain/core': 0.3.37
@@ -3498,6 +3548,10 @@ packages:
 
   '@marijn/find-cluster-break@1.0.2':
     resolution: {integrity: sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==}
+
+  '@mem0/community@0.0.1':
+    resolution: {integrity: sha512-4XVBpn/xtHkYdGNxPPAqsKZimGgmH/jVXiiGlw9x0iOBLC2bhknA5/X6+znRa9YforTmPtCDiM+euWui50VqdQ==}
+    engines: {node: '>=18'}
 
   '@mendable/firecrawl-js@0.0.28':
     resolution: {integrity: sha512-Xa+ZbBQkoR/KHM1ZpvJBdLWSCdRoRGyllDNoVvhKxGv9qXZk9h/lBxbqp3Kc1Kg2L2JJnJCkmeaTUCAn8y33GA==}
@@ -5789,6 +5843,9 @@ packages:
   '@types/express@4.17.21':
     resolution: {integrity: sha512-ejlPM315qwLpaQlQDTjPdsUFSc6ZsP4AN6AlWnogPjQ7CVi7PYF3YVz+CY3jE2pwYf7E/7HlDAN0rV2GxTG0HQ==}
 
+  '@types/express@5.0.1':
+    resolution: {integrity: sha512-UZUw8vjpWFXuDnjFTh7/5c2TWDlQqeXHi6hcN7F2XSVT5P+WmUnnbFS3KA6Jnc6IsEqI2qCVu2bK0R0J4A8ZQQ==}
+
   '@types/geojson@7946.0.16':
     resolution: {integrity: sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==}
 
@@ -6008,6 +6065,9 @@ packages:
 
   '@types/sockjs@0.3.36':
     resolution: {integrity: sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==}
+
+  '@types/sqlite3@3.1.11':
+    resolution: {integrity: sha512-KYF+QgxAnnAh7DWPdNDroxkDI3/MspH1NMx6m/N/6fT1G6+jvsw4/ZePt8R8cr7ta58aboeTfYFBDxTJ5yv15w==}
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
@@ -7278,7 +7338,7 @@ packages:
     resolution: {integrity: sha512-+IeTjjf44pKUY3vp1BacwO2tFAPcWCd64zxPZZm98dVj/kbSBeaHKB2D6eX7iRLHS1PTVASuqoR6mAJ+nrsTBg==}
     engines: {node: '>=14.17.0'}
     peerDependencies:
-      '@google/generative-ai': ^0.22.0
+      '@google/generative-ai': ^0.24.0
       cohere-ai: ^5.0.0 || ^6.0.0 || ^7.0.0
       ollama: ^0.5.0
       openai: 4.82.0
@@ -7299,7 +7359,7 @@ packages:
     resolution: {integrity: sha512-NpbYydbg4Uqt/9BXKgkZXn0fqpsh2Z1yjhkhKH+rcHMoq0pwI18BFSU2QU7Fk/ZypwGefW2AvqyE/3ZJIgy4QA==}
     engines: {node: '>=14.17.0'}
     peerDependencies:
-      '@google/generative-ai': ^0.22.0
+      '@google/generative-ai': ^0.24.0
       cohere-ai: ^5.0.0 || ^6.0.0 || ^7.0.0
       openai: 4.82.0
     peerDependenciesMeta:
@@ -8833,6 +8893,10 @@ packages:
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
 
+  eventid@2.0.1:
+    resolution: {integrity: sha512-sPNTqiMokAvV048P2c9+foqVJzk49o6d4e0D/sq5jog3pw+4kBgyR0gaM1FM7Mx6Kzd9dztesh9oYz1LWWOpzw==}
+    engines: {node: '>=10'}
+
   events@1.1.1:
     resolution: {integrity: sha512-kEcvvCBByWXGnZy6JUlgAp2gBIUjfCAV6P6TgT1/aaQKcmuAEC4OZTV1I4EWQLz2gxZw76atuVyvHhTxvi0Flw==}
     engines: {node: '>=0.4.x'}
@@ -9190,6 +9254,9 @@ packages:
 
   flowise-embed@3.0.3:
     resolution: {integrity: sha512-sLSZU72gzMV9Try82LR2RW7d5TTwcJxRysvJFN2N2E21B/SyyOEq8EXpALF59IwL7uL7+eXd3G7RjoxukqmCpQ==}
+
+  flowise-nim-container-manager@1.0.11:
+    resolution: {integrity: sha512-Er/leiIzJZ691kWqXkjCWv29g0G5qWA4juBOcGZ1P5kBLnkKFxbWc5x8JsSPcHuJQIiGNX/dYEzp2ZrOV3YYMg==}
 
   flowise-react-json-view@1.21.7:
     resolution: {integrity: sha512-oFjwtSLJkUWk6waLh8heCQ4o9b60FJRA2X8LefaZp5WaJvj/Rr2HILjk+ocf1JkfTcq8jc6t2jfIybg4leWsaQ==}
@@ -11179,6 +11246,9 @@ packages:
   lodash.isstring@4.0.1:
     resolution: {integrity: sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==}
 
+  lodash.mapvalues@4.6.0:
+    resolution: {integrity: sha512-JPFqXFeZQ7BfS00H58kClY7SPVeHertPE0lNuCyZ26/XlN8TvakYD7b9bGyNmXbT/D3BbtPAAmq90gPWqLkxlQ==}
+
   lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
 
@@ -11460,6 +11530,26 @@ packages:
     resolution: {integrity: sha512-GftCCBs6EN8sz3BoWO1bCj8t7YBtT713d8bUgbhg9Iel5kFSqnSvCK06TYIDJAtJ51cSiWkM/YemlT0dfoFycw==}
     engines: {node: '>=12'}
 
+  mem0ai@2.1.25:
+    resolution: {integrity: sha512-ydxT6mT12TJi8QIxKdhBNX3PNu/R/AFhQdlOpwlruoNnGIRZTfucZESy3SHmUeBdZ9XvhQ21ozApmowEw4O7ug==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@anthropic-ai/sdk': ^0.40.1
+      '@google/genai': ^0.7.0
+      '@langchain/core': 0.3.37
+      '@mistralai/mistralai': ^1.5.2
+      '@qdrant/js-client-rest': 1.13.0
+      '@supabase/supabase-js': ^2.49.1
+      '@types/jest': 29.5.14
+      '@types/pg': 8.11.0
+      '@types/sqlite3': 3.1.11
+      groq-sdk: 0.3.0
+      neo4j-driver: ^5.28.1
+      ollama: ^0.5.14
+      pg: 8.11.3
+      redis: ^4.6.13
+      sqlite3: 5.1.7
+
   memfs@3.5.3:
     resolution: {integrity: sha512-UERzLsxzllchadvbPs5aolHh65ISpKpM+ccLbOJ8/vvpBKmAWf+la7dXFy7Mr0ySHbdHrFv5kGFCUHHe6GFEmw==}
     engines: {node: '>= 4.0.0'}
@@ -11634,6 +11724,11 @@ packages:
   mime@1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
     engines: {node: '>=4'}
+    hasBin: true
+
+  mime@3.0.0:
+    resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==}
+    engines: {node: '>=10.0.0'}
     hasBin: true
 
   mimic-fn@2.1.0:
@@ -11852,6 +11947,10 @@ packages:
   msgpackr@1.11.2:
     resolution: {integrity: sha512-F9UngXRlPyWCDEASDpTf6c9uNhGPTqnTeLVt7bN+bU1eajoR/8V9ys2BRaV5C/e5ihE6sJ9uPIKaYt6bFuO32g==}
 
+  multer-cloud-storage@4.0.0:
+    resolution: {integrity: sha512-BGY8mc0qjZYpjQKSBz18xOsOBJkujqN5CZs5F6Gwb7GwQSO19daHf/k7D63tND8wwX4xH3FeAVS3OJwexDmlkQ==}
+    engines: {node: '>=14'}
+
   multer-s3@3.0.1:
     resolution: {integrity: sha512-BFwSO80a5EW4GJRBdUuSHblz2jhVSAze33ZbnGpcfEicoT0iRolx4kWR+AJV07THFRCQ78g+kelKFdjkCCaXeQ==}
     engines: {node: '>= 12.0.0'}
@@ -11954,9 +12053,6 @@ packages:
 
   next-tick@1.1.0:
     resolution: {integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==}
-
-  nim-container-manager@1.0.5:
-    resolution: {integrity: sha512-QFTpSNQVxzOLi2NtDaYDDo1/mF4g3wg/dOLaStBgQF8ZKUnuWzxGhZ/PDjjFKWoaHj2V6YvXE6cAAVAWQsQHkA==}
 
   no-case@3.0.4:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
@@ -13412,6 +13508,9 @@ packages:
 
   pumpify@1.5.1:
     resolution: {integrity: sha512-oClZI37HvuUJJxSKKrC17bZ9Cu0ZYhEAGPsPUy9KlMUmv9dKX2o77RUmq7f3XjIxbwyGwYzbzQ1L2Ks8sIradQ==}
+
+  pumpify@2.0.1:
+    resolution: {integrity: sha512-m7KOje7jZxrmutanlkS1daj1dS6z6BgslzOXmcSEpIlCxM3VJH7lG5QLeck/6hgF6F4crFf01UtQmNsJfweTAw==}
 
   punycode@1.3.2:
     resolution: {integrity: sha512-RofWgt/7fL5wP1Y7fxE7/EmTLzQVnB0ycyibJ0OOHIlJqTNzglYFxVwETOcIoJqJmpDXJ9xImDv+Fq34F/d4Dw==}
@@ -15707,6 +15806,9 @@ packages:
 
   url@0.10.3:
     resolution: {integrity: sha512-hzSUW2q06EqL1gKM/a+obYHLIO6ct2hwPuviqTTOcfFVc61UbfJ2Q32+uGL/HCPxKqrdGB5QUwIe7UqlDgwsOQ==}
+
+  urlencode@2.0.0:
+    resolution: {integrity: sha512-K4+koEq4II9FqKKdLyMwfVFiWvTLJsdsIihXCprumjlOwpviO44E4hAhLYBLb6CEVTZh9hXXMTQHIT+Hwv5BPw==}
 
   use-composed-ref@1.4.0:
     resolution: {integrity: sha512-djviaxuOOh7wkj0paeO1Q/4wMZ8Zrnag5H6yBvzN7AKKe8beOaED9SF5/ByLqsku8NP4zQqsvM2u3ew/tJK8/w==}
@@ -19321,7 +19423,7 @@ snapshots:
 
   '@gar/promisify@1.1.3': {}
 
-  '@getzep/zep-cloud@1.0.12(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(langchain@0.3.24(tfwsyzu74ujvredtvlqoj5oazi))':
+  '@getzep/zep-cloud@1.0.12(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(langchain@0.3.24(r52427dkjimy2sk2p6loiaaru4))':
     dependencies:
       form-data: 4.0.0
       node-fetch: 2.7.0(encoding@0.1.13)
@@ -19330,7 +19432,7 @@ snapshots:
       zod: 3.24.4
     optionalDependencies:
       '@langchain/core': 0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
-      langchain: 0.3.24(tfwsyzu74ujvredtvlqoj5oazi)
+      langchain: 0.3.24(r52427dkjimy2sk2p6loiaaru4)
     transitivePeerDependencies:
       - encoding
 
@@ -19366,6 +19468,86 @@ snapshots:
       - encoding
       - supports-color
 
+  '@google-cloud/common@5.0.2(encoding@0.1.13)':
+    dependencies:
+      '@google-cloud/projectify': 4.0.0
+      '@google-cloud/promisify': 4.1.0
+      arrify: 2.0.1
+      duplexify: 4.1.3
+      extend: 3.0.2
+      google-auth-library: 9.15.1(encoding@0.1.13)
+      html-entities: 2.6.0
+      retry-request: 7.0.2(encoding@0.1.13)
+      teeny-request: 9.0.0(encoding@0.1.13)
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  '@google-cloud/logging-winston@6.0.0(encoding@0.1.13)(winston@3.17.0)':
+    dependencies:
+      '@google-cloud/logging': 11.2.0(encoding@0.1.13)
+      google-auth-library: 9.15.1(encoding@0.1.13)
+      lodash.mapvalues: 4.6.0
+      winston: 3.17.0
+      winston-transport: 4.9.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  '@google-cloud/logging@11.2.0(encoding@0.1.13)':
+    dependencies:
+      '@google-cloud/common': 5.0.2(encoding@0.1.13)
+      '@google-cloud/paginator': 5.0.2
+      '@google-cloud/projectify': 4.0.0
+      '@google-cloud/promisify': 4.1.0
+      '@opentelemetry/api': 1.9.0
+      arrify: 2.0.1
+      dot-prop: 6.0.1
+      eventid: 2.0.1
+      extend: 3.0.2
+      gcp-metadata: 6.1.1(encoding@0.1.13)
+      google-auth-library: 9.15.1(encoding@0.1.13)
+      google-gax: 4.6.0(encoding@0.1.13)
+      on-finished: 2.4.1
+      pumpify: 2.0.1
+      stream-events: 1.0.5
+      uuid: 9.0.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  '@google-cloud/paginator@5.0.2':
+    dependencies:
+      arrify: 2.0.1
+      extend: 3.0.2
+
+  '@google-cloud/projectify@4.0.0': {}
+
+  '@google-cloud/promisify@4.0.0': {}
+
+  '@google-cloud/promisify@4.1.0': {}
+
+  '@google-cloud/storage@7.16.0(encoding@0.1.13)':
+    dependencies:
+      '@google-cloud/paginator': 5.0.2
+      '@google-cloud/projectify': 4.0.0
+      '@google-cloud/promisify': 4.0.0
+      abort-controller: 3.0.0
+      async-retry: 1.3.3
+      duplexify: 4.1.3
+      fast-xml-parser: 4.5.3
+      gaxios: 6.7.1(encoding@0.1.13)
+      google-auth-library: 9.15.1(encoding@0.1.13)
+      html-entities: 2.6.0
+      mime: 3.0.0
+      p-limit: 3.1.0
+      retry-request: 7.0.2(encoding@0.1.13)
+      teeny-request: 9.0.0(encoding@0.1.13)
+      uuid: 8.3.2
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
   '@google-cloud/vertexai@1.10.0(encoding@0.1.13)':
     dependencies:
       google-auth-library: 9.15.1(encoding@0.1.13)
@@ -19373,7 +19555,17 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google/generative-ai@0.22.0': {}
+  '@google/genai@0.7.0(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@6.0.5)':
+    dependencies:
+      google-auth-library: 9.15.1(encoding@0.1.13)
+      ws: 8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5)
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+
+  '@google/generative-ai@0.24.1': {}
 
   '@graphql-typed-document-node/core@3.2.0(graphql@16.11.0)':
     dependencies:
@@ -19794,7 +19986,7 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/community@0.3.42(3o72z643g534zm3y45uybil6ay)':
+  '@langchain/community@0.3.42(vgudzpgpf5vy3csv6wdj6kgj4m)':
     dependencies:
       '@browserbasehq/stagehand': 1.14.0(@playwright/test@1.52.0)(bufferutil@4.0.9)(deepmerge@4.3.1)(dotenv@16.5.0)(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))(utf-8-validate@6.0.5)(zod@3.22.4)
       '@ibm-cloud/watsonx-ai': 1.6.4(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))
@@ -19805,7 +19997,7 @@ snapshots:
       flat: 5.0.2
       ibm-cloud-sdk-core: 5.3.2
       js-yaml: 4.1.0
-      langchain: 0.3.24(tfwsyzu74ujvredtvlqoj5oazi)
+      langchain: 0.3.24(r52427dkjimy2sk2p6loiaaru4)
       langsmith: 0.3.26(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
       openai: 4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)
       uuid: 10.0.0
@@ -19822,11 +20014,12 @@ snapshots:
       '@browserbasehq/sdk': 2.5.0(encoding@0.1.13)
       '@datastax/astra-db-ts': 1.5.0
       '@elastic/elasticsearch': 8.18.2
-      '@getzep/zep-cloud': 1.0.12(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(langchain@0.3.24(tfwsyzu74ujvredtvlqoj5oazi))
+      '@getzep/zep-cloud': 1.0.12(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(langchain@0.3.24(r52427dkjimy2sk2p6loiaaru4))
       '@getzep/zep-js': 0.9.0
       '@gomomento/sdk': 1.111.0
       '@gomomento/sdk-core': 1.111.0
       '@google-ai/generativelanguage': 2.9.1(encoding@0.1.13)
+      '@google-cloud/storage': 7.16.0(encoding@0.1.13)
       '@huggingface/inference': 2.8.1
       '@mendable/firecrawl-js': 0.0.28
       '@notionhq/client': 2.3.0(encoding@0.1.13)
@@ -19844,7 +20037,7 @@ snapshots:
       apify-client: 2.12.3
       assemblyai: 4.12.2(bufferutil@4.0.9)(utf-8-validate@6.0.5)
       cheerio: 1.0.0
-      chromadb: 1.10.5(@google/generative-ai@0.22.0)(cohere-ai@7.17.1(encoding@0.1.13))(encoding@0.1.13)(ollama@0.5.15)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
+      chromadb: 1.10.5(@google/generative-ai@0.24.1)(cohere-ai@7.17.1(encoding@0.1.13))(encoding@0.1.13)(ollama@0.5.15)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
       cohere-ai: 7.17.1(encoding@0.1.13)
       crypto-js: 4.2.0
       d3-dsv: 2.0.0
@@ -19859,6 +20052,7 @@ snapshots:
       lodash: 4.17.21
       lunary: 0.7.15(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))(react@18.3.1)
       mammoth: 1.9.0
+      mem0ai: 2.1.25(@anthropic-ai/sdk@0.37.0(encoding@0.1.13))(@google/genai@0.7.0(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@6.0.5))(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(@mistralai/mistralai@0.1.3(encoding@0.1.13))(@qdrant/js-client-rest@1.14.0(typescript@5.8.3))(@supabase/supabase-js@2.49.4(bufferutil@4.0.9)(utf-8-validate@6.0.5))(@types/jest@29.5.14)(@types/pg@8.15.1)(@types/sqlite3@3.1.11)(encoding@0.1.13)(groq-sdk@0.5.0(encoding@0.1.13))(neo4j-driver@5.28.1)(ollama@0.5.15)(pg@8.15.6)(redis@4.7.1)(sqlite3@5.1.7)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))
       mongodb: 6.3.0(@aws-sdk/credential-providers@3.806.0)(socks@2.8.4)
       mysql2: 3.14.1
       neo4j-driver: 5.28.1
@@ -19936,10 +20130,11 @@ snapshots:
       - supports-color
       - zod
 
-  '@langchain/google-genai@0.1.9(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(zod@3.22.4)':
+  '@langchain/google-genai@0.2.3(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(zod@3.22.4)':
     dependencies:
-      '@google/generative-ai': 0.22.0
+      '@google/generative-ai': 0.24.1
       '@langchain/core': 0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
+      uuid: 11.1.0
       zod-to-json-schema: 3.24.5(zod@3.22.4)
     transitivePeerDependencies:
       - zod
@@ -20120,6 +20315,168 @@ snapshots:
     optional: true
 
   '@marijn/find-cluster-break@1.0.2': {}
+
+  '@mem0/community@0.0.1(upqxzzhnekrtxxlkovhpamvacm)':
+    dependencies:
+      '@langchain/community': 0.3.42(vgudzpgpf5vy3csv6wdj6kgj4m)
+      '@langchain/core': 0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
+      axios: 1.7.9(debug@4.4.0)
+      mem0ai: 2.1.25(@anthropic-ai/sdk@0.37.0(encoding@0.1.13))(@google/genai@0.7.0(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@6.0.5))(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(@mistralai/mistralai@0.1.3(encoding@0.1.13))(@qdrant/js-client-rest@1.14.0(typescript@5.8.3))(@supabase/supabase-js@2.49.4(bufferutil@4.0.9)(utf-8-validate@6.0.5))(@types/jest@29.5.14)(@types/pg@8.15.1)(@types/sqlite3@3.1.11)(encoding@0.1.13)(groq-sdk@0.5.0(encoding@0.1.13))(neo4j-driver@5.28.1)(ollama@0.5.15)(pg@8.15.6)(redis@4.7.1)(sqlite3@5.1.7)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))
+      uuid: 9.0.1
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - '@anthropic-ai/sdk'
+      - '@arcjet/redact'
+      - '@aws-crypto/sha256-js'
+      - '@aws-sdk/client-bedrock-agent-runtime'
+      - '@aws-sdk/client-bedrock-runtime'
+      - '@aws-sdk/client-dynamodb'
+      - '@aws-sdk/client-kendra'
+      - '@aws-sdk/client-lambda'
+      - '@aws-sdk/client-s3'
+      - '@aws-sdk/client-sagemaker-runtime'
+      - '@aws-sdk/client-sfn'
+      - '@aws-sdk/credential-provider-node'
+      - '@aws-sdk/dsql-signer'
+      - '@azure/search-documents'
+      - '@azure/storage-blob'
+      - '@browserbasehq/sdk'
+      - '@browserbasehq/stagehand'
+      - '@clickhouse/client'
+      - '@cloudflare/ai'
+      - '@datastax/astra-db-ts'
+      - '@elastic/elasticsearch'
+      - '@getmetal/metal-sdk'
+      - '@getzep/zep-cloud'
+      - '@getzep/zep-js'
+      - '@gomomento/sdk'
+      - '@gomomento/sdk-core'
+      - '@google-ai/generativelanguage'
+      - '@google-cloud/storage'
+      - '@google/genai'
+      - '@gradientai/nodejs-sdk'
+      - '@huggingface/inference'
+      - '@huggingface/transformers'
+      - '@ibm-cloud/watsonx-ai'
+      - '@lancedb/lancedb'
+      - '@langchain/anthropic'
+      - '@langchain/aws'
+      - '@langchain/cerebras'
+      - '@langchain/cohere'
+      - '@langchain/deepseek'
+      - '@langchain/google-genai'
+      - '@langchain/google-vertexai'
+      - '@langchain/google-vertexai-web'
+      - '@langchain/groq'
+      - '@langchain/mistralai'
+      - '@langchain/ollama'
+      - '@langchain/xai'
+      - '@layerup/layerup-security'
+      - '@libsql/client'
+      - '@mendable/firecrawl-js'
+      - '@mistralai/mistralai'
+      - '@mlc-ai/web-llm'
+      - '@mozilla/readability'
+      - '@neondatabase/serverless'
+      - '@notionhq/client'
+      - '@opensearch-project/opensearch'
+      - '@pinecone-database/pinecone'
+      - '@planetscale/database'
+      - '@premai/prem-sdk'
+      - '@qdrant/js-client-rest'
+      - '@raycast/api'
+      - '@rockset/client'
+      - '@smithy/eventstream-codec'
+      - '@smithy/protocol-http'
+      - '@smithy/signature-v4'
+      - '@smithy/util-utf8'
+      - '@spider-cloud/spider-client'
+      - '@supabase/supabase-js'
+      - '@tensorflow-models/universal-sentence-encoder'
+      - '@tensorflow/tfjs-converter'
+      - '@tensorflow/tfjs-core'
+      - '@types/jest'
+      - '@types/pg'
+      - '@types/sqlite3'
+      - '@upstash/ratelimit'
+      - '@upstash/redis'
+      - '@upstash/vector'
+      - '@vercel/kv'
+      - '@vercel/postgres'
+      - '@writerai/writer-sdk'
+      - '@xata.io/client'
+      - '@zilliz/milvus2-sdk-node'
+      - apify-client
+      - assemblyai
+      - azion
+      - better-sqlite3
+      - cassandra-driver
+      - cborg
+      - cheerio
+      - chromadb
+      - closevector-common
+      - closevector-node
+      - closevector-web
+      - cohere-ai
+      - convex
+      - crypto-js
+      - d3-dsv
+      - debug
+      - discord.js
+      - dria
+      - duck-duck-scrape
+      - encoding
+      - epub2
+      - fast-xml-parser
+      - firebase-admin
+      - google-auth-library
+      - googleapis
+      - groq-sdk
+      - handlebars
+      - hnswlib-node
+      - html-to-text
+      - ibm-cloud-sdk-core
+      - ignore
+      - interface-datastore
+      - ioredis
+      - it-all
+      - jsdom
+      - jsonwebtoken
+      - llmonitor
+      - lodash
+      - lunary
+      - mammoth
+      - mariadb
+      - mongodb
+      - mysql2
+      - neo4j-driver
+      - notion-to-md
+      - officeparser
+      - ollama
+      - openai
+      - pdf-parse
+      - peggy
+      - pg
+      - pg-copy-streams
+      - pickleparser
+      - playwright
+      - portkey-ai
+      - puppeteer
+      - pyodide
+      - redis
+      - replicate
+      - sonix-speech-recognition
+      - sqlite3
+      - srt-parser-2
+      - typeorm
+      - typesense
+      - usearch
+      - voy-search
+      - weaviate-ts-client
+      - web-auth-library
+      - word-extractor
+      - ws
+      - youtubei.js
 
   '@mendable/firecrawl-js@0.0.28':
     dependencies:
@@ -23139,6 +23496,12 @@ snapshots:
       '@types/qs': 6.9.18
       '@types/serve-static': 1.15.7
 
+  '@types/express@5.0.1':
+    dependencies:
+      '@types/body-parser': 1.19.5
+      '@types/express-serve-static-core': 5.0.6
+      '@types/serve-static': 1.15.7
+
   '@types/geojson@7946.0.16': {}
 
   '@types/glob-stream@8.0.3':
@@ -23384,6 +23747,10 @@ snapshots:
   '@types/sizzle@2.3.9': {}
 
   '@types/sockjs@0.3.36':
+    dependencies:
+      '@types/node': 22.15.17
+
+  '@types/sqlite3@3.1.11':
     dependencies:
       '@types/node': 22.15.17
 
@@ -25012,24 +25379,24 @@ snapshots:
 
   chownr@2.0.0: {}
 
-  chromadb@1.10.5(@google/generative-ai@0.22.0)(cohere-ai@7.17.1(encoding@0.1.13))(encoding@0.1.13)(ollama@0.5.15)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)):
+  chromadb@1.10.5(@google/generative-ai@0.24.1)(cohere-ai@7.17.1(encoding@0.1.13))(encoding@0.1.13)(ollama@0.5.15)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)):
     dependencies:
       cliui: 8.0.1
       isomorphic-fetch: 3.0.0(encoding@0.1.13)
     optionalDependencies:
-      '@google/generative-ai': 0.22.0
+      '@google/generative-ai': 0.24.1
       cohere-ai: 7.17.1(encoding@0.1.13)
       ollama: 0.5.15
       openai: 4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)
     transitivePeerDependencies:
       - encoding
 
-  chromadb@1.8.1(@google/generative-ai@0.22.0)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)):
+  chromadb@1.8.1(@google/generative-ai@0.24.1)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)):
     dependencies:
       cliui: 8.0.1
       isomorphic-fetch: 3.0.0(encoding@0.1.13)
     optionalDependencies:
-      '@google/generative-ai': 0.22.0
+      '@google/generative-ai': 0.24.1
       cohere-ai: 7.9.5(encoding@0.1.13)
       openai: 4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)
     transitivePeerDependencies:
@@ -26843,6 +27210,10 @@ snapshots:
 
   eventemitter3@5.0.1: {}
 
+  eventid@2.0.1:
+    dependencies:
+      uuid: 8.3.2
+
   events@1.1.1: {}
 
   events@3.3.0: {}
@@ -27415,6 +27786,13 @@ snapshots:
       zod: 3.22.4
     transitivePeerDependencies:
       - debug
+      - supports-color
+
+  flowise-nim-container-manager@1.0.11:
+    dependencies:
+      dockerode: 4.0.6
+      express: 4.21.2
+    transitivePeerDependencies:
       - supports-color
 
   flowise-react-json-view@1.21.7(@types/react@19.1.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
@@ -29714,7 +30092,7 @@ snapshots:
 
   kuler@2.0.0: {}
 
-  langchain@0.3.24(tfwsyzu74ujvredtvlqoj5oazi):
+  langchain@0.3.24(r52427dkjimy2sk2p6loiaaru4):
     dependencies:
       '@langchain/core': 0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
       '@langchain/openai': 0.4.4(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))
@@ -29733,7 +30111,7 @@ snapshots:
       '@langchain/anthropic': 0.3.14(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)
       '@langchain/aws': 0.1.4(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))
       '@langchain/cohere': 0.0.7(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
-      '@langchain/google-genai': 0.1.9(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(zod@3.22.4)
+      '@langchain/google-genai': 0.2.3(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(zod@3.22.4)
       '@langchain/google-vertexai': 0.2.7(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(zod@3.22.4)
       '@langchain/groq': 0.1.2(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))
       '@langchain/mistralai': 0.2.0(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))
@@ -29753,9 +30131,9 @@ snapshots:
     dependencies:
       mustache: 4.2.0
 
-  langfuse-langchain@3.37.2(langchain@0.3.24(tfwsyzu74ujvredtvlqoj5oazi)):
+  langfuse-langchain@3.37.2(langchain@0.3.24(r52427dkjimy2sk2p6loiaaru4)):
     dependencies:
-      langchain: 0.3.24(tfwsyzu74ujvredtvlqoj5oazi)
+      langchain: 0.3.24(r52427dkjimy2sk2p6loiaaru4)
       langfuse: 3.37.2
       langfuse-core: 3.37.2
 
@@ -29920,7 +30298,7 @@ snapshots:
       '@aws-crypto/sha256-js': 5.2.0
       '@datastax/astra-db-ts': 1.5.0
       '@google-cloud/vertexai': 1.10.0(encoding@0.1.13)
-      '@google/generative-ai': 0.22.0
+      '@google/generative-ai': 0.24.1
       '@grpc/grpc-js': 1.13.3
       '@huggingface/inference': 2.8.1
       '@llamaindex/cloud': 0.0.5(node-fetch@2.7.0(encoding@0.1.13))
@@ -29935,7 +30313,7 @@ snapshots:
       '@zilliz/milvus2-sdk-node': 2.5.8
       ajv: 8.17.1
       assemblyai: 4.12.2(bufferutil@4.0.9)(utf-8-validate@6.0.5)
-      chromadb: 1.8.1(@google/generative-ai@0.22.0)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
+      chromadb: 1.8.1(@google/generative-ai@0.24.1)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
       cohere-ai: 7.9.5(encoding@0.1.13)
       js-tiktoken: 1.0.20
       lodash: 4.17.21
@@ -30048,6 +30426,8 @@ snapshots:
   lodash.isplainobject@4.0.6: {}
 
   lodash.isstring@4.0.1: {}
+
+  lodash.mapvalues@4.6.0: {}
 
   lodash.memoize@4.1.2: {}
 
@@ -30480,6 +30860,32 @@ snapshots:
       vinyl: 2.2.1
       vinyl-file: 3.0.0
 
+  mem0ai@2.1.25(@anthropic-ai/sdk@0.37.0(encoding@0.1.13))(@google/genai@0.7.0(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@6.0.5))(@langchain/core@0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4)))(@mistralai/mistralai@0.1.3(encoding@0.1.13))(@qdrant/js-client-rest@1.14.0(typescript@5.8.3))(@supabase/supabase-js@2.49.4(bufferutil@4.0.9)(utf-8-validate@6.0.5))(@types/jest@29.5.14)(@types/pg@8.15.1)(@types/sqlite3@3.1.11)(encoding@0.1.13)(groq-sdk@0.5.0(encoding@0.1.13))(neo4j-driver@5.28.1)(ollama@0.5.15)(pg@8.15.6)(redis@4.7.1)(sqlite3@5.1.7)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5)):
+    dependencies:
+      '@anthropic-ai/sdk': 0.37.0(encoding@0.1.13)
+      '@google/genai': 0.7.0(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@6.0.5)
+      '@langchain/core': 0.3.37(openai@4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.22.4))
+      '@mistralai/mistralai': 0.1.3(encoding@0.1.13)
+      '@qdrant/js-client-rest': 1.14.0(typescript@5.8.3)
+      '@supabase/supabase-js': 2.49.4(bufferutil@4.0.9)(utf-8-validate@6.0.5)
+      '@types/jest': 29.5.14
+      '@types/pg': 8.15.1
+      '@types/sqlite3': 3.1.11
+      axios: 1.7.9(debug@4.4.0)
+      groq-sdk: 0.5.0(encoding@0.1.13)
+      neo4j-driver: 5.28.1
+      ollama: 0.5.15
+      openai: 4.82.0(encoding@0.1.13)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@6.0.5))(zod@3.24.4)
+      pg: 8.15.6
+      redis: 4.7.1
+      sqlite3: 5.1.7
+      uuid: 9.0.1
+      zod: 3.24.4
+    transitivePeerDependencies:
+      - debug
+      - encoding
+      - ws
+
   memfs@3.5.3:
     dependencies:
       fs-monkey: 1.0.6
@@ -30778,6 +31184,8 @@ snapshots:
 
   mime@1.6.0: {}
 
+  mime@3.0.0: {}
+
   mimic-fn@2.1.0: {}
 
   mimic-fn@4.0.0: {}
@@ -30959,6 +31367,17 @@ snapshots:
     optionalDependencies:
       msgpackr-extract: 3.0.3
 
+  multer-cloud-storage@4.0.0(encoding@0.1.13):
+    dependencies:
+      '@google-cloud/storage': 7.16.0(encoding@0.1.13)
+      '@types/express': 5.0.1
+      multer: 1.4.5-lts.2
+      urlencode: 2.0.0
+      uuid: 11.1.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
   multer-s3@3.0.1(@aws-sdk/client-s3@3.806.0):
     dependencies:
       '@aws-sdk/client-s3': 3.806.0
@@ -31076,13 +31495,6 @@ snapshots:
   netmask@2.0.2: {}
 
   next-tick@1.1.0: {}
-
-  nim-container-manager@1.0.5:
-    dependencies:
-      dockerode: 4.0.6
-      express: 4.21.2
-    transitivePeerDependencies:
-      - supports-color
 
   no-case@3.0.4:
     dependencies:
@@ -32728,6 +33140,12 @@ snapshots:
       duplexify: 3.7.1
       inherits: 2.0.4
       pump: 2.0.1
+
+  pumpify@2.0.1:
+    dependencies:
+      duplexify: 4.1.3
+      inherits: 2.0.4
+      pump: 3.0.2
 
   punycode@1.3.2: {}
 
@@ -35498,6 +35916,10 @@ snapshots:
     dependencies:
       punycode: 1.3.2
       querystring: 0.2.0
+
+  urlencode@2.0.0:
+    dependencies:
+      iconv-lite: 0.6.3
 
   use-composed-ref@1.4.0(@types/react@19.1.3)(react@18.3.1):
     dependencies:
