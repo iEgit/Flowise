@@ -2,15 +2,16 @@
  * Temporary disabled due to increasing open connections without releasing them
  * Use TypeORM instead
  */
-import { VectorStoreDriver } from './Base'
-import { FLOWISE_CHATID } from '../../../../src'
 import { DistanceStrategy, PGVectorStore, PGVectorStoreArgs } from '@langchain/community/vectorstores/pgvector'
 import { Document } from '@langchain/core/documents'
 import { PoolConfig } from 'pg'
+import { FLOWISE_CHATID } from '../../../../src'
 import { getContentColumnName } from '../utils'
+import { VectorStoreDriver } from './Base'
 
 export class PGVectorDriver extends VectorStoreDriver {
     static CONTENT_COLUMN_NAME_DEFAULT: string = 'pageContent'
+    static connections: { [key: string]: PGVectorStore } = {}
 
     protected _postgresConnectionOptions: PoolConfig
 
@@ -59,7 +60,13 @@ export class PGVectorDriver extends VectorStoreDriver {
     }
 
     async instanciate(metadataFilters?: any) {
-        return this.adaptInstance(await PGVectorStore.initialize(this.getEmbeddings(), await this.getArgs()), metadataFilters)
+        const args = await this.getArgs();
+        const connectionOptions = args.postgresConnectionOptions || {};
+        const key = JSON.stringify(connectionOptions, Object.keys(connectionOptions).sort());
+        if (!PGVectorDriver.connections[key]) {
+            PGVectorDriver.connections[key] = await PGVectorStore.initialize(this.getEmbeddings(), args);
+        }
+        return this.adaptInstance(PGVectorDriver.connections[key], metadataFilters);
     }
 
     async fromDocuments(documents: Document[]) {
