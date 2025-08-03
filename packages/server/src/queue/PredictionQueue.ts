@@ -87,7 +87,9 @@ export class PredictionQueue extends BaseQueue {
             return await executeCustomNodeFunction({
                 appDataSource: this.appDataSource,
                 componentNodes: this.componentNodes,
-                data: executeCustomFunctionData.data
+                data: executeCustomFunctionData.data,
+                workspaceId: executeCustomFunctionData.workspaceId,
+                orgId: executeCustomFunctionData.orgId
             })
         }
 
@@ -96,6 +98,13 @@ export class PredictionQueue extends BaseQueue {
             const signal = new AbortController()
             this.abortControllerPool.add(abortControllerId, signal)
             data.signal = signal
+        }
+
+        if (this.redisPublisher) {
+            logger.info(
+                `[PredictionQueue] RedisPublisher is connected [orgId:${data.orgId}/flowId:${data.chatflow.id}/chatId:${data.chatId}]`,
+                this.redisPublisher.isConnected()
+            )
         }
 
         return await executeFlow(data)

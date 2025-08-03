@@ -1,27 +1,28 @@
+import { HttpStatusCode } from 'axios'
+import { RedisStore } from 'connect-redis'
+import express, { NextFunction, Request, Response } from 'express'
+import session from 'express-session'
+import { StatusCodes } from 'http-status-codes'
+import jwt, { JwtPayload, sign } from 'jsonwebtoken'
 import passport from 'passport'
 import { VerifiedCallback } from 'passport-jwt'
-import express, { NextFunction, Request, Response } from 'express'
-import { ErrorMessage, IAssignedWorkspace, LoggedInUser } from '../../Interface.Enterprise'
-import { decryptToken, encryptToken, generateSafeCopy } from '../../utils/tempTokenUtils'
-import jwt, { JwtPayload, sign } from 'jsonwebtoken'
-import { getAuthStrategy } from './AuthStrategy'
-import { IdentityManager } from '../../../IdentityManager'
-import { HttpStatusCode } from 'axios'
-import { getRunningExpressApp } from '../../../utils/getRunningExpressApp'
-import session from 'express-session'
-import { OrganizationService } from '../../services/organization.service'
-import { AccountService } from '../../services/account.service'
-import { WorkspaceUser, WorkspaceUserStatus } from '../../database/entities/workspace-user.entity'
-import { RoleErrorMessage, RoleService } from '../../services/role.service'
-import { GeneralRole } from '../../database/entities/role.entity'
-import { RedisStore } from 'connect-redis'
-import { WorkspaceUserService } from '../../services/workspace-user.service'
-import { OrganizationUserErrorMessage, OrganizationUserService } from '../../services/organization-user.service'
 import { InternalFlowiseError } from '../../../errors/internalFlowiseError'
-import { StatusCodes } from 'http-status-codes'
-import { OrganizationUserStatus } from '../../database/entities/organization-user.entity'
+import { IdentityManager } from '../../../IdentityManager'
 import { Platform } from '../../../Interface'
+import { getRunningExpressApp } from '../../../utils/getRunningExpressApp'
+import { OrganizationUserStatus } from '../../database/entities/organization-user.entity'
+import { GeneralRole } from '../../database/entities/role.entity'
+import { WorkspaceUser, WorkspaceUserStatus } from '../../database/entities/workspace-user.entity'
+import { ErrorMessage, IAssignedWorkspace, LoggedInUser } from '../../Interface.Enterprise'
+import { AccountService } from '../../services/account.service'
+import { OrganizationUserErrorMessage, OrganizationUserService } from '../../services/organization-user.service'
+import { OrganizationService } from '../../services/organization.service'
+import { RoleErrorMessage, RoleService } from '../../services/role.service'
+import { WorkspaceUserService } from '../../services/workspace-user.service'
+import { decryptToken, encryptToken, generateSafeCopy } from '../../utils/tempTokenUtils'
+import { getAuthStrategy } from './AuthStrategy'
 import { initializeDBClientAndStore, initializeRedisClientAndStore } from './SessionPersistance'
+import { v4 as uuidv4 } from 'uuid'
 
 const localStrategy = require('passport-local').Strategy
 
@@ -123,7 +124,7 @@ export const initializeJwtCookieMiddleware = async (app: express.Application, id
                     if (!organizationUser)
                         throw new InternalFlowiseError(StatusCodes.NOT_FOUND, OrganizationUserErrorMessage.ORGANIZATION_USER_NOT_FOUND)
                     organizationUser.status = OrganizationUserStatus.ACTIVE
-                    await workspaceUserService.updateWorkspaceUser(workspaceUser)
+                    await workspaceUserService.updateWorkspaceUser(workspaceUser, queryRunner)
                     await organizationUserService.updateOrganizationUser(organizationUser)
 
                     const workspaceUsers = await workspaceUserService.readWorkspaceUserByUserId(organizationUser.userId, queryRunner)
@@ -259,11 +260,18 @@ export const initializeJwtCookieMiddleware = async (app: express.Application, id
                 if (identityManager.isEnterprise() && !identityManager.isLicenseValid()) {
                     return res.status(401).json({ redirectUrl: '/license-expired' })
                 }
-                req.login(user, { session: true }, async (error) => {
-                    if (error) {
-                        return next ? next(error) : res.status(401).json(error)
+
+                req.session.regenerate((regenerateErr) => {
+                    if (regenerateErr) {
+                        return next ? next(regenerateErr) : res.status(500).json({ message: 'Session regeneration failed' })
                     }
-                    return setTokenOrCookies(res, user, true, req)
+
+                    req.login(user, { session: true }, async (error) => {
+                        if (error) {
+                            return next ? next(error) : res.status(401).json(error)
+                        }
+                        return setTokenOrCookies(res, user, true, req)
+                    })
                 })
             } catch (error: any) {
                 return next ? next(error) : res.status(401).json(error)
@@ -291,8 +299,14 @@ export const setTokenOrCookies = (
     returnUser.isSSO = !isSSO ? false : isSSO
 
     if (redirect) {
-        // Send user data as part of the redirect URL (using query parameters)
-        const dashboardUrl = `/sso-success?user=${encodeURIComponent(JSON.stringify(returnUser))}`
+        // 1. Generate a random token
+        const ssoToken = uuidv4()
+
+        // 2. Store returnUser in your session store, keyed by ssoToken, with a short expiry
+        storeSSOUserPayload(ssoToken, returnUser)
+        // 3. Redirect with token only
+        const dashboardUrl = `/sso-success?token=${ssoToken}`
+
         // Return the token as a cookie in our response.
         let resWithCookies = res
             .cookie('token', token, {
@@ -400,4 +414,9 @@ export const verifyToken = (req: Request, res: Response, next: NextFunction) => 
         req.user = user
         next()
     })(req, res, next)
+}
+
+const storeSSOUserPayload = (ssoToken: string, returnUser: any) => {
+    const app = getRunningExpressApp()
+    app.cachePool.addSSOTokenCache(ssoToken, returnUser)
 }
