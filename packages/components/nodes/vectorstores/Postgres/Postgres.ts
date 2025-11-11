@@ -341,8 +341,8 @@ class Postgres_VectorStores implements INode {
             default:
                 return new TypeORMDriver(nodeData, options)
         }*/
-        return new PGVectorDriver(nodeData, options)
-        // return new TypeORMDriver(nodeData, options)
+        // return new PGVectorDriver(nodeData, options)
+        return new TypeORMDriver(nodeData, options)
     }
 }
 

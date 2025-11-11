@@ -175,6 +175,7 @@ export class App {
         this.app.use(cors(getCorsOptions()))
 
         // Parse cookies
+        // @ts-ignore
         this.app.use(cookieParser())
 
         // Allow embedding from specified domains.
